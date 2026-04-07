@@ -64,30 +64,29 @@ const portfolioData = {
             company: "AIM United Company Ltd",
             title: "Electrical BIM Engineer",
             period: "Mar 2025 - Present",
-            location: "KSA",
-            description: "Leading electrical BIM coordination for high-scale infrastructure and architectural projects, ensuring clash-free multi-disciplinary integration."
+            location: "EGY",
+            description: "Developed and managed electrical BIM models up to LOD 400 in alignment with project specifications and industry standards. • Prepared shop drawings for all electrical embedded systems including power, lighting, and low current. • Extracted and incorporated real data from material submittals into the BIM model to ensure design accuracy. • Coordinated with other disciplines (architectural, structural, mechanical) to resolve clashes and ensure seamless integration. • Participated in clash detection and coordination meetings, resolving issues efficiently to support smooth construction workflows. • Maintained model accuracy and compliance throughout design, construction, and handover stages. • Utilized Autodesk Revit, Navisworks, and AutoCAD for modeling, documentation, and coordination tasks."
         },
         {
             company: "Pioneer Engineering Consultancy LLC",
             title: "Electrical BIM Engineer",
             period: "Jun 2024 - Mar 2025",
-            location: "UAE/KSA",
-            description: "Developed detailed shop drawings and 3D models for power and lighting systems according to international standards."
+            location: "UAE/EGY",
+            description: "Work as Electrical BIM Engineer responsible for  -Creating  3D Model For Electrical Systems Like ( CableRouting-Power-Lighting-ICT-...etc)  -Clash Solutions with Other Discipline   -Presentation for Layout To hand over to Client -Design systems According To Codes  -Shop drawing for Different Discpline."
         },
-
         {
             company: "Eduneers",
             title: "Team Manager and Coordinator",
             period: "Apr 2023 - 2024",
             location: "Online/Egypt",
-            description: "Led a team of electrical BIM engineers, coordinating training sessions and project delivery workflows."
+            description: "ffective Team Leadership: Led a multidisciplinary team of engineers and trainers, coordinating efforts to ensure seamless project execution and timely delivery of training programs and engineering solutions. Streamlined Project Management: Implemented project management best practices, resulting in improved task prioritization and resource allocation, leading to the successful completion of multiple training programs and engineering projects. Enhanced Client Satisfaction: Coordinated with clients to understand their needs and customized training content accordingly, leading to higher client satisfaction and repeat business. Optimized Workflow Efficiency: Developed and standardized processes for training program delivery and project management, reducing turnaround time and increasing operational efficiency."
         },
         {
             company: "ALDAR CONSULTING OFFICE",
             title: "Assistant Electrical Design Engineer",
             period: "2022 - 2023",
             location: "Egypt",
-            description: "Assisted in electrical load calculations and lighting design using Dialux Evo for residential projects."
+            description: "Project Involvement: Contributed to multiple large-scale projects, including water treatment plants, sewage stations, and administrative buildings. Design and Drafting: Created detailed electromechanical designs, ensuring compliance with industry standards and project requirements. Technical Coordination: Collaborated with multidisciplinary teams to integrate mechanical, electrical, and plumbing (MEP) systems into overall project designs. Project Supervision: Assisted in on-site supervision, ensuring that the implementation adhered to design specifications and timelines. Client Communication: Engaged with clients to gather requirements, provide design solutions, and ensure alignment with project objectives. Document Preparation: Developed technical drawings, specifications, and reports for project submissions, maintaining accuracy and thoroughness. Problem Solving: Resolved technical issues and provided innovative solutions to enhance project efficiency and reduce costs. Quality Control: Ensured the quality of designs and project deliverables by conducting rigorous reviews and adhering to quality assurance protocols."
         }
     ],
     education: [
@@ -98,6 +97,22 @@ const portfolioData = {
             location: "Egypt",
             description: "Electrical Power and Machine Department. Grade: Very Good (80.67%). Graduation Project: Electrical distribution for hospital using KNX (Excellent)."
         }
+    ],
+    technicalSkills: [
+        "C# / .NET", "Revit API", "BIM Automation", "Electrical Design", "Power Distribution", "Lighting Systems", "Low Current Systems", "Clash Detection", "Coordination", "SQL Server"
+    ],
+    tools: [
+        "Revit", "AutoCAD", "Navisworks", "Dialux Evo", "ETAP", "Visual Studio", "Git", "Postman", "BIM360 / ACC", "Relux"
+    ],
+    courses: [
+        { title: "BIM Application Development", provider: "KAITECH", date: "2025" },
+        { title: "Technical Coordination Workshop", provider: "KAITECH", date: "2025" },
+        { title: "Electrical BIM with Autodesk Revit", provider: "Eduneers", date: "2024" },
+        { title: "KNX Protocol and BMS", provider: "Eduneers", date: "2024" },
+        { title: "Advanced Technical Office Training", provider: "Eduneers", date: "2023" },
+        { title: "Project Management Professional (PMP)", provider: "AmCham", date: "2023" },
+        { title: "Autodesk Revit MEP Advanced", provider: "Udemy", date: "2023" },
+        { title: "Solar Energy Training", provider: "Africa Power", date: "2022" }
     ],
     projects: [
         {
@@ -341,7 +356,9 @@ const portfolioData = {
             category: "addin",
             title: "REVIT AUTOMATION ADD-IN",
             images: [
-                "cover.png"
+                "cover.png",
+                "https://drive.google.com/file/d/1gSDl6PfBFY9NyKtN9lnzYYKQnf3rEEAZ/view?usp=drive_link",
+                "https://drive.google.com/file/d/1DctbJHrshFktrT8CK4Xn8NElCFmaowMb/view?usp=drive_link"
             ],
             badge: "Software Tool",
             refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",

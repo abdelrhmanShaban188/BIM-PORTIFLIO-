@@ -4,7 +4,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Menu Controls
     const menuToggle = document.querySelector('#menu-toggle');
     const menuOverlay = document.querySelector('#menu-overlay');
-    const menuLinks = document.querySelectorAll('.menu-link');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // --- View Switching Logic (Resume standalone as requested) ---
+    const homeView = document.getElementById('home-view');
+    const resumeView = document.getElementById('resume');
+    const backBtn = document.getElementById('resume-back-btn');
+
+    const showResume = () => {
+        homeView.style.display = 'none';
+        resumeView.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        
+        // Refresh GSAP ScrollTrigger since layout changed
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+            // Re-run motion
+            gsap.from('.profile-card', { opacity: 0, x: -50, duration: 1 });
+            gsap.from('.timeline-item', { opacity: 0, y: 30, stagger: 0.15, duration: 0.8 });
+        }, 100);
+    };
+
+    const showHome = (targetHash = null) => {
+        resumeView.style.display = 'none';
+        homeView.style.display = 'block';
+        
+        if (targetHash) {
+            const el = document.querySelector(targetHash);
+            if (el) {
+                // Wait for display change to settle
+                setTimeout(() => {
+                    const offset = 80;
+                    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: elementPosition - offset,
+                        behavior: 'smooth'
+                    });
+                }, 50);
+            }
+        }
+        ScrollTrigger.refresh();
+    };
 
     if (menuToggle && menuOverlay) {
         menuToggle.addEventListener('click', () => {
@@ -14,13 +54,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href !== '#resume') {
+                if(menuToggle && menuOverlay) {
+                    menuToggle.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                }
+                document.body.style.overflow = 'auto';
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    showHome(href);
+                }
+            }
         });
     });
+
+    // Global router for any Resume link clicks
+    document.body.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href="#resume"]');
+        if (link) {
+            e.preventDefault();
+            if (menuToggle && menuOverlay) {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            showResume();
+        }
+    });
+
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showHome('#hero');
+        });
+    }
 
     // Header Scroll Effect
     window.addEventListener('scroll', () => {
@@ -39,6 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Render Resume/Timeline
     const expTimeline = document.querySelector('#experience-timeline');
     const eduTimeline = document.querySelector('#education-timeline');
+    const skillsList = document.querySelector('#resume-skills');
+    const toolsGrid = document.querySelector('#resume-tools');
+    const coursesList = document.querySelector('#resume-courses');
+
+    // Destructure new data
+    const { technicalSkills, tools, courses } = portfolioData;
 
     if (expTimeline && experience) {
         experience.forEach(item => {
@@ -55,17 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             expTimeline.appendChild(div);
-            
-            // Motion for items
-            gsap.from(div, {
-                x: -30,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: div,
-                    start: 'top 90%'
-                }
-            });
         });
     }
 
@@ -84,30 +149,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             eduTimeline.appendChild(div);
-
-            gsap.from(div, {
-                x: -30,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: div,
-                    start: 'top 90%'
-                }
-            });
         });
     }
 
-    // Motion for Profile Card
-    gsap.from('.profile-card', {
-        scale: 0.9,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-            trigger: '.profile-card',
-            start: 'top 80%'
-        }
-    });
+    if (skillsList && technicalSkills) {
+        technicalSkills.forEach(skill => {
+            const li = document.createElement('li');
+            li.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${skill}`;
+            skillsList.appendChild(li);
+        });
+    }
+
+    if (toolsGrid && tools) {
+        tools.forEach(tool => {
+            const span = document.createElement('span');
+            span.className = 'tool-tag';
+            span.innerText = tool;
+            toolsGrid.appendChild(span);
+        });
+    }
+
+    if (coursesList && courses) {
+        courses.forEach(course => {
+            const div = document.createElement('div');
+            div.className = 'course-card';
+            div.innerHTML = `
+                <div class="course-info">
+                    <h5>${course.title}</h5>
+                    <p>${course.provider}</p>
+                </div>
+                <span class="course-date">${course.date}</span>
+            `;
+            coursesList.appendChild(div);
+        });
+    }
 
     // 4. Render Services
     const servicesGrid = document.querySelector('#services-grid');

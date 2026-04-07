@@ -69,11 +69,46 @@ header.scrolled {
     cursor: pointer;
 }
 
+/* Side-by-Side Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.nav-link.highlight {
+    color: var(--accent);
+}
+
 .menu-toggle {
+    display: none; /* Hidden on desktop */
     cursor: pointer;
     width: 35px;
     height: 20px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 2100;
@@ -858,6 +893,128 @@ footer {
     line-height: 1.6;
 }
 
+/* Detailed Sidebar Cards (New) */
+.resume-card-detail {
+    background: #0c0c0c;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.card-header i {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.card-header h5 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+}
+
+.skills-checklist {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.skills-checklist li {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+}
+
+.skills-checklist li i {
+    color: var(--accent);
+    font-size: 0.7rem;
+}
+
+.tools-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool-tag {
+    background: #151515;
+    border: 1px solid #222;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Courses Styling */
+.course-card {
+    background: #0c0c0c;
+    border: 1px solid var(--border);
+    padding: 20px 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.course-info h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.course-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.course-date {
+    background: rgba(227, 30, 36, 0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Standalone Resume Navigation */
+.resume-nav-top {
+    margin-bottom: 40px;
+}
+
+.back-home-btn {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-home-btn:hover {
+    color: var(--accent);
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .resume-layout {
@@ -877,6 +1034,14 @@ footer {
     .modal-info { padding: 30px; border-left: none; border-top: 1px solid var(--border); }
     .hero h1 { font-size: 4rem; }
     .side-pill { right: 15px; padding: 20px 10px; }
+    
+    .desktop-nav {
+        display: none; /* Hide side-by-side links on mobile */
+    }
+    
+    .menu-toggle {
+        display: flex; /* Show hamburger on mobile */
+    }
 }
 
 @media (max-width: 768px) {
