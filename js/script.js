@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const { projects, categories, services, personalInfo } = portfolioData;
+    const { projects, categories, services, personalInfo, experience, education } = portfolioData;
 
     // 1. Menu Controls
     const menuToggle = document.querySelector('#menu-toggle');
@@ -36,7 +36,80 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutText = document.querySelector('#about-text');
     if (aboutText) aboutText.innerHTML = personalInfo.about;
 
-    // 3. Render Services
+    // 3. Render Resume/Timeline
+    const expTimeline = document.querySelector('#experience-timeline');
+    const eduTimeline = document.querySelector('#education-timeline');
+
+    if (expTimeline && experience) {
+        experience.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'timeline-item';
+            div.innerHTML = `
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">${item.period}</span>
+                <div class="timeline-content">
+                    <h5>${item.title}</h5>
+                    <span class="company">${item.company}</span>
+                    <span class="location"><i class="fa-solid fa-location-dot"></i> ${item.location}</span>
+                    <p>${item.description}</p>
+                </div>
+            `;
+            expTimeline.appendChild(div);
+            
+            // Motion for items
+            gsap.from(div, {
+                x: -30,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: div,
+                    start: 'top 90%'
+                }
+            });
+        });
+    }
+
+    if (eduTimeline && education) {
+        education.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'timeline-item';
+            div.innerHTML = `
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">${item.period}</span>
+                <div class="timeline-content">
+                    <h5>${item.degree}</h5>
+                    <span class="company">${item.school}</span>
+                    <span class="location"><i class="fa-solid fa-location-dot"></i> ${item.location}</span>
+                    <p>${item.description}</p>
+                </div>
+            `;
+            eduTimeline.appendChild(div);
+
+            gsap.from(div, {
+                x: -30,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: div,
+                    start: 'top 90%'
+                }
+            });
+        });
+    }
+
+    // Motion for Profile Card
+    gsap.from('.profile-card', {
+        scale: 0.9,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '.profile-card',
+            start: 'top 80%'
+        }
+    });
+
+    // 4. Render Services
     const servicesGrid = document.querySelector('#services-grid');
     if (servicesGrid) {
         services.forEach(s => {

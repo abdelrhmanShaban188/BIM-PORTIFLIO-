@@ -59,6 +59,46 @@ const portfolioData = {
             technologies: ["Fire Alarm", "CCTV", "Data"]
         }
     ],
+    experience: [
+        {
+            company: "AIM United Company Ltd",
+            title: "Electrical BIM Engineer",
+            period: "Mar 2025 - Present",
+            location: "KSA",
+            description: "Leading electrical BIM coordination for high-scale infrastructure and architectural projects, ensuring clash-free multi-disciplinary integration."
+        },
+        {
+            company: "Pioneer Engineering Consultancy LLC",
+            title: "Electrical BIM Engineer",
+            period: "Jun 2024 - Mar 2025",
+            location: "UAE/KSA",
+            description: "Developed detailed shop drawings and 3D models for power and lighting systems according to international standards."
+        },
+
+        {
+            company: "Eduneers",
+            title: "Team Manager and Coordinator",
+            period: "Apr 2023 - 2024",
+            location: "Online/Egypt",
+            description: "Led a team of electrical BIM engineers, coordinating training sessions and project delivery workflows."
+        },
+        {
+            company: "ALDAR CONSULTING OFFICE",
+            title: "Assistant Electrical Design Engineer",
+            period: "2022 - 2023",
+            location: "Egypt",
+            description: "Assisted in electrical load calculations and lighting design using Dialux Evo for residential projects."
+        }
+    ],
+    education: [
+        {
+            school: "Mansoura University",
+            degree: "Bachelor’s Degree of Electrical Engineering",
+            period: "2019 - 2024",
+            location: "Egypt",
+            description: "Electrical Power and Machine Department. Grade: Very Good (80.67%). Graduation Project: Electrical distribution for hospital using KNX (Excellent)."
+        }
+    ],
     projects: [
         {
             id: 1,

@@ -653,8 +653,221 @@ footer {
     color: #000;
 }
 
+/* Resume Section (Architectural Split Layout) */
+.resume-section {
+    padding: 120px 0;
+    background: #000;
+}
+
+.resume-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Sidebar - Profile Card */
+.resume-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.profile-card {
+    background: #0c0c0c;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    padding: 5px;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.profile-card:hover .profile-img-container img {
+    filter: grayscale(0%);
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.profile-divider {
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 25px;
+}
+
+.profile-contact {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contact-item i {
+    color: var(--accent);
+    width: 20px;
+}
+
+.profile-socials-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.profile-socials-card a {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.profile-socials-card a:hover {
+    color: var(--accent);
+}
+
+/* Timeline Components */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.timeline-header i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    background: rgba(227, 30, 36, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.timeline-header h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid var(--accent);
+    z-index: 2;
+}
+
+.timeline-date {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(227, 30, 36, 0.1);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.timeline-content h5 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.timeline-content .company {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ccc;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-content .location {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
+    .resume-layout {
+        grid-template-columns: 1fr;
+    }
+    .resume-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 60px;
+    }
     .modal-content {
         grid-template-columns: 1fr;
         height: auto;
