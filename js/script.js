@@ -142,10 +142,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const media = currentProject.images[currentImgIndex];
         const isVideo = media.toLowerCase().endsWith('.mp4');
+        const isYouTube = media.includes('youtube.com') || media.includes('youtu.be');
+        const isDrive = media.includes('drive.google.com');
 
-        mediaContainer.innerHTML = isVideo 
-            ? `<video src="${media}" controls autoplay style="width:100%; height:100%"></video>`
-            : `<img src="${media}" alt="${currentProject.title}">`;
+        if (isYouTube) {
+            const videoId = media.split('v=')[1] || media.split('/').pop().split('?')[0];
+            mediaContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width:100%; height:100%"></iframe>`;
+        } else if (isDrive) {
+            const driveId = media.split('/d/')[1].split('/')[0];
+            mediaContainer.innerHTML = `<iframe src="https://drive.google.com/file/d/${driveId}/preview" frameborder="0" allow="autoplay" style="width:100%; height:100%"></iframe>`;
+        } else if (isVideo) {
+            mediaContainer.innerHTML = `<video src="${media}" controls autoplay style="width:100%; height:100%"></video>`;
+        } else {
+            mediaContainer.innerHTML = `<img src="${media}" alt="${currentProject.title}">`;
+        }
 
         modalTitle.textContent = currentProject.title;
         modalCat.textContent = currentProject.category.toUpperCase();
