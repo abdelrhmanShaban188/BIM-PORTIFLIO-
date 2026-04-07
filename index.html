@@ -1,179 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdelrhman Shaban | Electrical BIM Engineer</title>
-    <meta name="description"
-        content="Portfolio of Abdelrhman Shaban, Electrical BIM Engineer specializing in electrical design, shop drawings, and BIM coordination.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="logo-white.png">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-
-    <!-- Navigation -->
-    <header>
-        <div class="container-fluid">
-            <nav class="jt-nav">
-                <div class="logo">
-                    <h2 class="ams-logo">AMS</h2>
-                </div>
-                <div class="menu-toggle" id="menu-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <div class="nav-logo" onclick="window.scrollTo(0,0)">AMS.</div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
-    <!-- Overlay Menu -->
+    <!-- Menu Overlay -->
     <div class="menu-overlay" id="menu-overlay">
-        <div class="overlay-content">
-            <ul class="overlay-links">
-                <li><a href="#about" class="menu-link">About</a></li>
-                <li><a href="#skills" class="menu-link">Skills</a></li>
-                <li><a href="#services" class="menu-link">Services</a></li>
-                <li><a href="#projects" class="menu-link">Projects</a></li>
-                <li><a href="#contact" class="menu-link">Contact</a></li>
-            </ul>
-            <div class="overlay-footer">
-                <div class="social-links-minimal">
-                    <a href="#" id="link-linkedin-overlay"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" id="link-whatsapp-overlay"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" id="link-gmail-overlay"><i class="far fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
+        <ul class="overlay-links">
+            <li><a href="#hero" class="menu-link">Home</a></li>
+            <li><a href="#about" class="menu-link">About</a></li>
+            <li><a href="#projects" class="menu-link">Projects</a></li>
+            <li><a href="#services" class="menu-link">Services</a></li>
+            <li><a href="#footer" class="menu-link">Contact</a></li>
+        </ul>
     </div>
 
     <!-- Hero Section -->
-    <section id="about" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 id="hero-name" class="animate-up">Loading...</h1>
-                <h2 id="hero-title" class="animate-up"></h2>
-                <p id="hero-desc" class="animate-up"></p>
-                <div class="animate-up">
-                    <a href="#projects" class="cta-button">View My Work</a>
-                    <a href="#" id="contact-email" class="cta-button">Contact Me</a>
-                </div>
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <span class="section-label" style="color: #fff;">Electrical BIM Engineer</span>
+            <h1>ABDELRHMAN<br>SHABAN</h1>
+            <h2>Electrical BIM Systems Specialist</h2>
+            <p>Specializing in 3D Electrical Design and BIM Coordination for high-scale architectural projects across Egypt & KSA.</p>
+            <div style="margin-top: 30px; display: flex; gap: 20px;">
+                <a href="#projects" class="cta-button primary">View Selected Work</a>
+                <a href="https://drive.google.com/file/d/1CX9Tqbz4BVnfpEMr39viKlwkzl-GpERx/view" target="_blank" class="cta-button">View Resume <i class="fa-solid fa-file-pdf"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div id="skills-container" class="skills-grid">
-                <!-- Skills injected by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section (BIM Services) -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">Engineering Services</h2>
-            <div id="services-grid" class="services-grid">
-                <!-- Services injected by JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="why-us" class="skills-section">
-        <div class="container-fluid">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="services-grid">
-
-                <div class="service-card animate-up">
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3 class="service-title">Full MEP Capability</h3>
-                    <p class="service-desc">Comprehensive design and shop drawing capabilities across all
-                        electro-mechanical disciplines.</p>
-                </div>
-                <div class="service-card animate-up">
-                    <div class="service-icon"><i class="fas fa-check-double"></i></div>
-                    <h3 class="service-title">International Standards</h3>
-                    <p class="service-desc">Our designs strictly comply with the latest international codes and
-                        engineering standards.</p>
-                </div>
-                <div class="service-card animate-up">
-                    <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h3 class="service-title">Technical Support</h3>
-                    <p class="service-desc">Strong technical support and field coordination to ensure seamless project
-                        execution.</p>
+            <span class="section-label">Biography</span>
+            <h2 class="section-title">About My Journey</h2>
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px;">
+                <p class="modal-desc" id="about-text" style="font-size: 1.2rem;"></p>
+                <div class="modal-info" style="padding: 0; border: none;">
+                    <ul class="modal-meta-list" style="border-top: none;">
+                        <li><span class="meta-label">Location</span><span class="meta-value">Egypt & KSA</span></li>
+                        <li><span class="meta-label">Expertise</span><span class="meta-value">Electrical BIM Systems</span></li>
+                        <li><span class="meta-label">Phone</span><span class="meta-value">+201018736140</span></li>
+                        <li><span class="meta-label">Email</span><span class="meta-value">abdelrhman.mohamedshaban@gmail.com</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title">My Work</h2>
-
-            <!-- Category Tabs -->
-            <div id="tabs-container" class="tabs-container">
-                <!-- Tabs injected by JS -->
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="tabs-container" id="filter-tabs">
+                <!-- Dynamic Filters -->
             </div>
 
-            <div id="projects-container" class="projects-grid">
-                <!-- Projects injected by JS -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamic Projects -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
+    <!-- Services Section -->
+    <section id="services">
         <div class="container">
-            <div class="social-links">
-                <a href="#" id="link-linkedin" class="social-icon" title="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="#" id="link-whatsapp" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" id="link-gmail" class="social-icon" title="Gmail"><i class="far fa-envelope"></i></a>
+            <span class="section-label">Expertise</span>
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid" id="services-grid">
+                <!-- Dynamic Services -->
             </div>
-            <div class="footer-logo">
-                <h2 class="ams-logo">AMS</h2>
-            </div>
-            <p>&copy; 2026 <span id="footer-name">Abdelrhman Shaban</span>. All rights reserved.</p>
         </div>
-    </footer>
+    </section>
 
-    <div id="gallery-modal" class="gallery-modal">
-        <span class="close-gallery">&times;</span>
-        <div class="gallery-content">
-            <div id="media-container">
-                <img id="gallery-image" src="" alt="Project Image">
-                <video id="gallery-video" controls style="display:none; max-width:100%; height:auto;"></video>
+    <!-- Project Modal (Instant Gallery) -->
+    <div class="modal" id="project-modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <div class="modal-visuals">
+                <div id="modal-media-container" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <!-- Image or Video -->
+                </div>
+                <div class="modal-nav">
+                    <button id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="gallery-nav">
-                <button id="prev-img"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-img"><i class="fas fa-chevron-right"></i></button>
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <div style="margin-bottom: 20px;">
+                    <span class="p-cat" id="modal-category"></span>
+                </div>
+                <p class="modal-desc" id="modal-details"></p>
+                <ul class="modal-meta-list" id="modal-meta">
+                    <!-- Dynamic Meta -->
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="#" id="modal-ref-link" target="_blank" class="cta-button" style="border-color: var(--accent); color: var(--accent);">View Reference</a>
+                </div>
             </div>
-            <div id="gallery-info"></div>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Floating Social Bar -->
+    <div class="side-pill">
+        <a href="https://wa.me/201018736140" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:abdelrhman.mohamedshaban@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/abdelrhman-shaban-/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <div class="pill-divider"></div>
+        <div class="theme-toggle" id="theme-toggle"><i class="fa-solid fa-sun"></i></div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <!-- Contact Box (Like reference) -->
+            <div class="contact-card" style="padding-bottom: 100px;">
+                <h3>Let's build something <span>remarkable.</span></h3>
+                <p>Have a BIM workflow that needs automating? A project that needs coordination? Let's talk.</p>
+                <div class="contact-actions" style="margin-top: 40px; display: flex; justify-content: center; gap: 15px;">
+                    <a href="mailto:abdelrhman.mohamedshaban@gmail.com" class="cta-button primary" style="display: inline-flex !important; opacity: 1 !important;">Contact Me <i class="fa-solid fa-paper-plane" style="margin-left: 10px;"></i></a>
+                    <a href="https://drive.google.com/file/d/1CX9Tqbz4BVnfpEMr39viKlwkzl-GpERx/view" target="_blank" class="cta-button" style="display: inline-flex !important; opacity: 1 !important; border-color: #fff;">View Resume <i class="fa-solid fa-file-pdf" style="margin-left: 10px;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-logo" style="margin-top: 60px;">AMS.</div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/abdelrhman-shaban-/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:abdelrhman.mohamedshaban@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+201018736140"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <p style="color: #555; text-transform: uppercase;">&copy; 2026 ABDELRHMAN SHABAN. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
