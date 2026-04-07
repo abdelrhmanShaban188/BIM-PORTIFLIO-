@@ -161,7 +161,7 @@ const portfolioData = {
                 "SPEED PARK/image (35).png",
                 "SPEED PARK/image (5).png"
             ],
-            refLink: "https://qiddiya.com/en/things-to-do/speed-park-track/",
+            refLink: "https://qiddiya.com/qiddiya-city/assets/speed-park-track/",
             technologies: ["BIM", "Infrastructure", "Sports"]
         },
         {
@@ -237,7 +237,7 @@ const portfolioData = {
                 "SOLIMAN FAKEEH HOSIBTAL/Screenshot 2026-04-06 003504.png",
                 "SOLIMAN FAKEEH HOSIBTAL/Screenshot 2026-04-06 003545.png"
             ],
-            refLink: "https://www.mepmiddleeast.com/projects/fakeeh-care-invests-23m-in-saudi-hospital-network-expansion-awards-new-contracts",
+            refLink: "https://en.ahc-contracting.com/projects/dr-soliman-fakeeh-medical-center-al-zahra-jeddah",
             technologies: ["Healthcare", "BIM"]
         },
         {
@@ -292,7 +292,6 @@ const portfolioData = {
                 "AHAUD ROFIDA HOTEL/Screenshot 2026-04-06 001326.png",
                 "AHAUD ROFIDA HOTEL/Screenshot 2026-04-06 001352.png"
             ],
-            refLink: "https://rofayda.org/",
             technologies: ["Hospitality", "BIM Electrical Design"]
         },
         {
