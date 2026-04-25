@@ -362,6 +362,30 @@ const portfolioData = {
             badge: "Software Tool",
             refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
             technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
+        },
+        {
+            id: 11,
+            category: "addin",
+            title: "AMS TOOLS CABLE",
+            images: [
+                "cover.png",
+                "https://drive.google.com/file/d/1xnyQvCc4NtZSvbRiA9rcynpdJtkhc8i8/view?usp=drive_link"
+            ],
+            badge: "Software Tool",
+            refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
+            technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
+        },
+        {
+            id: 12,
+            category: "addin",
+            title: "AMS TOOLS - CLASH LIVE",
+            images: [
+                "cover.png",
+                "https://drive.google.com/file/d/1J1NkiwcYXcLSde_UbmwTDzNWERijC8bC/view?usp=drive_link"
+            ],
+            badge: "Software Tool",
+            refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
+            technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
         }
     ]
 };
