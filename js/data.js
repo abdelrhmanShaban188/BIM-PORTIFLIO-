@@ -372,7 +372,7 @@ const portfolioData = {
                 "https://drive.google.com/file/d/1xnyQvCc4NtZSvbRiA9rcynpdJtkhc8i8/view?usp=drive_link"
             ],
             badge: "Software Tool",
-            refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
+            refLink: "https://drive.google.com/file/d/1td23e-UXVAIUTyOqVJj8szaLQS1osDnG/view?usp=drive_link",
             technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
         },
         {
@@ -384,7 +384,7 @@ const portfolioData = {
                 "https://drive.google.com/file/d/1J1NkiwcYXcLSde_UbmwTDzNWERijC8bC/view?usp=drive_link"
             ],
             badge: "Software Tool",
-            refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
+            refLink: "https://drive.google.com/file/d/1dGfm6Ytu7TTTcaqkPzQ6Mqpl92hWvbNW/view?usp=drive_link",
             technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
         }
     ]

@@ -320,6 +320,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentProject.refLink) {
             modalRef.style.display = 'inline-block';
             modalRef.href = currentProject.refLink;
+            if (currentProject.category === 'addin') {
+                modalRef.innerHTML = 'Download Add-in <i class="fa-solid fa-download" style="margin-left: 5px;"></i>';
+            } else {
+                modalRef.innerHTML = 'View Reference';
+            }
         } else {
             modalRef.style.display = 'none';
         }
