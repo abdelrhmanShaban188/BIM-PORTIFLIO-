@@ -362,6 +362,49 @@ const portfolioData = {
             badge: "Software Tool",
             refLink: "https://www.linkedin.com/in/abdelrhman-shaban-/",
             technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
+        },
+        {
+            id: 11,
+            category: "addin",
+            title: "AMS TOOLS CABLE",
+            images: [
+                "cover.png",
+                "https://drive.google.com/file/d/1xnyQvCc4NtZSvbRiA9rcynpdJtkhc8i8/view?usp=drive_link"
+            ],
+            badge: "Software Tool",
+            refLink: "https://drive.google.com/file/d/1td23e-UXVAIUTyOqVJj8szaLQS1osDnG/view?usp=drive_link",
+            technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
+        },
+        {
+            id: 12,
+            category: "addin",
+            title: "AMS TOOLS - CLASH LIVE",
+            images: [
+                "cover.png",
+                "https://drive.google.com/file/d/1J1NkiwcYXcLSde_UbmwTDzNWERijC8bC/view?usp=drive_link"
+            ],
+            badge: "Software Tool",
+            refLink: "https://drive.google.com/file/d/1dGfm6Ytu7TTTcaqkPzQ6Mqpl92hWvbNW/view?usp=drive_link",
+            technologies: ["C#", ".NET", "Revit API", "BIM Automation"]
+        },
+        {
+            id: 13,
+            category: "bim",
+            title: "SEDRA PROJECT",
+            location: "KSA",
+            consultant: "DIYAR",
+            client: "ROSHN GROUP",
+            details: "Electrical BIM coordination For Electrical systems And Quantity Takeoff For Electrical systems For the SEDRA project.",
+            images: [
+                "SEDRA/1.png",
+                "SEDRA/2.png",
+                "SEDRA/3.png",
+                "SEDRA/7.png",
+                "SEDRA/4.png",
+                "SEDRA/5.png",
+                "SEDRA/6.png"
+            ],
+            technologies: ["BIM", "Electrical", "Coordination"]
         }
     ]
 };
